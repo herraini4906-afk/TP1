@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercice 2 - Découvrir le HTML</title>
+    <title>Exercice 2 - bonjour IAP</title>
 </head>
 <body>
     <h1>Découvrir le HTML</h1>
@@ -18,4 +18,5 @@
         Exemple de caractères spéciaux : &copy; 2025 &nbsp; - &nbsp; Prix : 50 &euro;
     </p>
 </body>
+
 </html>
