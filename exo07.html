@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 7 - Créer un compte</title>
+</head>
+<body>
+    <h1>Créer un compte</h1>
+
+    <form action="#" method="post">
+
+        <!-- Identité -->
+        <fieldset>
+            <legend>Identité</legend>
+
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" required>
+            <br><br>
+
+            <label for="prenom">Prénom :</label>
+            <input type="text" id="prenom" name="prenom" required>
+            <br><br>
+
+            <label for="dob">Date de naissance :</label>
+            <input type="date" id="dob" name="dob" min="1900-01-01" max="<?php echo date('Y-m-d'); ?>" required>
+        </fieldset>
+        <br>
+
+        <!-- Contact -->
+        <fieldset>
+            <legend>Contact</legend>
+
+            <label for="tel">Téléphone :</label>
+            <input type="tel" id="tel" name="tel" pattern="^0[5-7]\d{8}$" title="Format marocain : 0xxxxxxxxx" required>
+            <br><br>
+
+            <label for="site">Site personnel :</label>
+            <input type="url" id="site" name="site">
+        </fieldset>
+        <br>
+
+        <!-- Sécurité -->
+        <fieldset>
+            <legend>Sécurité</legend>
+
+            <label for="password">Mot de passe :</label>
+            <input type="password" id="password" name="password" minlength="8" required>
+            <br><br>
+
+            <label for="confirm_password">Confirmation :</label>
+            <input type="password" id="confirm_password" name="confirm_password" minlength="8" required>
+        </fieldset>
+        <br>
+
+        <!-- Préférences -->
+        <fieldset>
+            <legend>Préférences</legend>
+
+            <input type="checkbox" id="newsletter" name="newsletter">
+            <label for="newsletter">S’inscrire à la newsletter</label>
+            <br><br>
+
+            <span>Rôle :</span><br>
+            <input type="radio" id="etudiant" name="role" value="Étudiant" required>
+            <label for="etudiant">Étudiant</label><br>
+            <input type="radio" id="pro" name="role" value="Pro">
+            <label for="pro">Pro</label>
+        </fieldset>
+        <br>
+
+        <button type="submit">Créer le compte</button>
+    </form>
+
+    <script>
+        // Vérification que mot de passe et confirmation sont identiques
+        const form = document.querySelector("form");
+        form.addEventListener("submit", function(event) {
+            const password = document.getElementById("password").value;
+            const confirm = document.getElementById("confirm_password").value;
+            if (password !== confirm) {
+                alert("Les mots de passe ne correspondent pas !");
+                event.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>

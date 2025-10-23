@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 3 - Liens et image</title>
+</head>
+<body>
+    <h1>Exercice 3 : Liens et Image</h1>
+
+    <h2>Liens</h2>
+    <!-- Lien externe -->
+    <p>
+        Visitez le site de 
+        <a href="https://www.mozilla.org" target="_blank" rel="noopener">
+            Mozilla
+        </a>.
+    </p>
+
+    <!-- Lien interne -->
+    <p>
+        Retour à la page précédente :
+        <a href="exo02.html">Découvrir le HTML</a>
+    </p>
+
+    <h2>Image</h2>
+    <img src="img/logo.png" alt="Logo fictif du site" width="120">
+</body>
+</html>

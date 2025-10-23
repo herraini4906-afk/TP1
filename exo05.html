@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 5 - Tableau inventaire</title>
+</head>
+<body>
+    <h1>Exercice 5 : Tableau inventaire</h1>
+
+    <table border="1">
+        <caption>Inventaire boutique</caption>
+        
+        <!-- En-têtes -->
+        <thead>
+            <tr>
+                <th>Produit</th>
+                <th>Catégorie</th>
+                <th>Prix (€)</th>
+                <th>Stock</th>
+            </tr>
+        </thead>
+
+        <!-- Corps du tableau -->
+        <tbody>
+            <tr>
+                <td>Laptop</td>
+                <td>Informatique</td>
+                <td>799</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>Souris</td>
+                <td rowspan="2">Accessoires</td>
+                <td>19</td>
+                <td>57</td>
+            </tr>
+            <tr>
+                <td>Clavier</td>
+                <!-- La cellule "Accessoires" est fusionnée sur 2 lignes -->
+                <td>39</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Écran</td>
+                <td>Informatique</td>
+                <td>189</td>
+                <td>23</td>
+            </tr>
+        </tbody>
+
+        <!-- Pied du tableau -->
+        <tfoot>
+            <tr>
+                <td colspan="4">Total articles distincts : 4</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
